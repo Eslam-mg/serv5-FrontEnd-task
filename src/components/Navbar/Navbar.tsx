@@ -16,7 +16,7 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <nav className="w-full bg-white border-b border-borderColor shadow-sm ">
+        <nav className="w-full bg-white border-b border-borderColor">
             {/* Top Bar */}
             <div className="bg-background1Color">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
