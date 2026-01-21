@@ -32,7 +32,7 @@ const slides = [
 
 export default function HeroCarousel() {
     return (
-        <Carousel className="w-full border border-red-500">
+        <Carousel className="w-full">
             <CarouselContent>
                 {slides.map((slide, index) => (
                     <CarouselItem key={index}>
