@@ -14,7 +14,7 @@ const slides = [
         title: "SMART WEARABLE.",
         subtitle: "Best Deal Online on smart watches",
         discount: "UP to 80% OFF",
-        image: "/image/image2.png",
+        image: "/image/image 5.png",
     },
     {
         title: "SMART WEARABLE.",
