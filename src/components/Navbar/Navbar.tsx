@@ -2,6 +2,11 @@
 
 import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
+import {
+    InputGroup,
+    InputGroupAddon,
+    InputGroupInput,
+  } from "@/components/ui/input-group"
 import Image from 'next/image';
 import { ChartIcon, CloseIcon } from '../Icons/Icon';
 import Link from 'next/link';
