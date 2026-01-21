@@ -32,7 +32,7 @@ const slides = [
 
 export default function HeroCarousel() {
     return (
-        <Carousel className="w-full">
+        <Carousel className="w-full border border-red-500">
             <CarouselContent>
                 {slides.map((slide, index) => (
                     <CarouselItem key={index}>
@@ -79,8 +79,8 @@ export default function HeroCarousel() {
             </CarouselContent>
 
             {/* Arrows */}
-            <CarouselPrevious size="lg" className="left-0 -translate-x-1/2 h-12 w-12 md:w-20 md:h-20 border-8 border-white rounded-full bg-background3Color hover:bg-background3Color text-primaryColor cursor-pointer shadow-none" />
-            <CarouselNext className="right-0 translate-x-1/2 h-12 w-12 md:w-20 md:h-20 border-8 border-white rounded-full bg-background3Color hover:bg-background3Color text-primaryColor cursor-pointer shadow-none" />
+            <CarouselPrevious className="left-0 -translate-x-1/2 h-12 w-12 lg:w-20 lg:h-20 border-4 lg:border-8 border-white rounded-full bg-background3Color hover:bg-background3Color text-primaryColor cursor-pointer shadow-none" />
+            <CarouselNext className="right-0 translate-x-1/2 h-12 w-12 lg:w-20 lg:h-20 border-4 lg:border-8 border-white rounded-full bg-background3Color hover:bg-background3Color text-primaryColor cursor-pointer shadow-none" />
         </Carousel>
     )
 }
