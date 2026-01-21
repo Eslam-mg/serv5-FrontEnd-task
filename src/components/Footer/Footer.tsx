@@ -27,9 +27,9 @@ const customerServices = [
 export default function Footer() {
 
     return (
-        <footer className="w-full bg-primaryColor text-white">
+        <footer className="w-full bg-primaryColor text-white relative overflow-hidden">
             {/* Main Footer Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-[#0C9BDA]">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                     {/* Left Section - Contact & Download */}
                     <div className="space-y-6">
@@ -144,12 +144,17 @@ export default function Footer() {
             </div>
 
             {/* Bottom Section - Copyright */}
-            <div className="border-t border-white/20">
+            <div className="">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <p className="text-center text-sm text-white/80">
                         © 2022 All rights reserved. Reliance Retail Ltd.
                     </p>
                 </div>
+            </div>
+
+            {/*  */}
+            <div className="w-105 h-105 bg-transparent rounded-full border-2 border-[#0C9BDA] p-4 absolute top-0 -right-20 -translate-y-1/3">
+                <div className="w-full h-full rounded-full bg-[#0C9BDA]" />
             </div>
         </footer>
     );
