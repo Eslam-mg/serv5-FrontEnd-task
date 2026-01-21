@@ -6,7 +6,8 @@ import {
     InputGroup,
     InputGroupAddon,
     InputGroupInput,
-  } from "@/components/ui/input-group"
+} from "@/components/ui/input-group"
+import { Search } from "lucide-react";
 import Image from 'next/image';
 import { ChartIcon, CloseIcon } from '../Icons/Icon';
 import Link from 'next/link';
@@ -74,13 +75,13 @@ export default function Navbar() {
                     {/* Center Section - Search Bar */}
                     <div className="hidden md:flex flex-1 max-w-2xl">
                         <div className="relative w-full max-w-md ms-auto bg-background3Color rounded-md">
-                            <Image src="/icon/Search.svg" width={20} height={20} alt='map bin' loading='lazy' className='absolute top-1/2 -translate-y-1/2 left-2' />
-                            <Input
-                                type="text"
-                                placeholder="Search essentials, groceries and more..."
-                                className="w-full pl-10 pr-4 py-2 rounded-md outline-primaryColor focus:outline-primaryColor focus:ring-2 focus:ring-primaryColor border-none shadow-none"
-                            />
-                            <Image src="/icon/list.svg" width={20} height={20} alt='map bin' loading='lazy' className='absolute top-1/2 -translate-y-1/2 right-4' />
+                            <InputGroup className="max-w-md shadow-none border-none">
+                                <InputGroupInput placeholder="Search essentials, groceries and more..." />
+                                <InputGroupAddon className='text-primaryColor'>
+                                    <Search />
+                                </InputGroupAddon>
+                                <InputGroupAddon align="inline-end"><Image src="/icon/list.svg" width={20} height={20} alt='map bin' loading='lazy' className='absolute top-1/2 -translate-y-1/2 right-4' /></InputGroupAddon>
+                            </InputGroup>
                         </div>
                     </div>
 
