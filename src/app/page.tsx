@@ -17,11 +17,11 @@ export default function Home() {
       </section>
 
       {/* top category */}
-      <section className="w-full max-w-7xl mx-auto px-8 mt-4">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <TopCategories/>
       </section>
 
-      <section className="w-full max-w-7xl mx-auto px-8 mt-4">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <DailyEssentials/>
       </section>
     </>
