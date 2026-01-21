@@ -1,0 +1,27 @@
+<svg width="135" height="40" viewBox="0 0 135 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="135" height="40" rx="5" fill="black"/>
+<text x="45" y="13" fill="white" font-family="Arial" font-size="8">GET IT ON</text>
+<text x="45" y="28" fill="white" font-family="Arial" font-size="16" font-weight="bold">Google Play</text>
+<path d="M8.5 7.5L23.5 20L8.5 32.5V7.5Z" fill="url(#paint0_linear)" stroke="white" stroke-width="0.5"/>
+<path d="M23.5 20L8.5 7.5L28.5 17L23.5 20Z" fill="url(#paint1_linear)" stroke="white" stroke-width="0.5"/>
+<path d="M23.5 20L28.5 23L8.5 32.5L23.5 20Z" fill="url(#paint2_linear)" stroke="white" stroke-width="0.5"/>
+<path d="M23.5 20L28.5 17L28.5 23L23.5 20Z" fill="url(#paint3_linear)" stroke="white" stroke-width="0.5"/>
+<defs>
+<linearGradient id="paint0_linear" x1="8.5" y1="20" x2="23.5" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00D6FF"/>
+<stop offset="1" stop-color="#0095D5"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="18.5" y1="12.25" x2="18.5" y2="12.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD800"/>
+<stop offset="1" stop-color="#FF8A00"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="18.5" y1="26.25" x2="18.5" y2="26.25" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF3A44"/>
+<stop offset="1" stop-color="#B11162"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="26" y1="20" x2="26" y2="20" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFDE00"/>
+<stop offset="1" stop-color="#669900"/>
+</linearGradient>
+</defs>
+</svg>
