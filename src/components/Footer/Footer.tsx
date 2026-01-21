@@ -29,7 +29,7 @@ export default function Footer() {
     return (
         <footer className="w-full bg-primaryColor text-white relative overflow-hidden">
             {/* Main Footer Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-[#0C9BDA]">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 border-b border-[#0C9BDA] relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                     {/* Left Section - Contact & Download */}
                     <div className="space-y-6">
@@ -75,10 +75,7 @@ export default function Footer() {
                         <div className="space-y-3">
                             <h3 className="text-base font-semibold">Download App</h3>
                             <div className="flex flex-col sm:flex-row gap-3">
-                                <Link
-                                    href="#"
-                                    className="transition-transform hover:scale-105 duration-200"
-                                >
+                                <Link href="/" >
                                     <Image
                                         src="/icon/app-store.svg"
                                         width={135}
@@ -87,10 +84,7 @@ export default function Footer() {
                                         loading="lazy"
                                     />
                                 </Link>
-                                <Link
-                                    href="#"
-                                    className="transition-transform hover:scale-105 duration-200"
-                                >
+                                <Link href="/">
                                     <Image
                                         src="/icon/google-play.svg"
                                         width={135}
@@ -153,7 +147,7 @@ export default function Footer() {
             </div>
 
             {/*  */}
-            <div className="w-105 h-105 bg-transparent rounded-full border-2 border-[#0C9BDA] p-4 absolute top-0 -right-20 -translate-y-1/3">
+            <div className="w-105 h-105 bg-transparent rounded-full border-2 border-[#0C9BDA] p-4 absolute top-0 -right-20 -translate-y-1/3 z-0">
                 <div className="w-full h-full rounded-full bg-[#0C9BDA]" />
             </div>
         </footer>
