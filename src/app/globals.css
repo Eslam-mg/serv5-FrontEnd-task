@@ -131,3 +131,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.customScrollbar {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #008ECC #e6e6e6;
+}
