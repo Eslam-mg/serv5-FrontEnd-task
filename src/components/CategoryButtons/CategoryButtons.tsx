@@ -20,7 +20,8 @@ const categories = [
 
 export default function CategoryButtons() {
     return (
-        <div className="flex items-center justify-between gap-3 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-fit overflow-x-auto py-4 customScrollbar">
+        <div className="w-full py-2 px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between gap-3 py-2 max-w-7xl mx-auto h-fit overflow-x-auto customScrollbar">
             {categories.map((cat) => (
                 <DropdownMenu key={cat.name}>
                     <DropdownMenuTrigger asChild>
@@ -38,6 +39,8 @@ export default function CategoryButtons() {
                     </DropdownMenuTrigger>
                 </DropdownMenu>
             ))}
+
+            </div>
         </div>
     )
 }
