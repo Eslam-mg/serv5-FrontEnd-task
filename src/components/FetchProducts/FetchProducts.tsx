@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { useQuery } from "@tanstack/react-query"
+import { SkeletonCard } from '../SkeletonCard/SkeletonCard';
 interface Product {
     id: number
     title: string
@@ -23,6 +24,8 @@ export default function FetchProducts() {
     const {data, isLoading, isError, error} = useQuery({queryKey: ["products"], queryFn: getAllProducts})
 
     return (
-        <div>FetchProducts</div>
+        <div>
+            {isLoading && (<SkeletonCard/>)}
+        </div>
     )
 }
