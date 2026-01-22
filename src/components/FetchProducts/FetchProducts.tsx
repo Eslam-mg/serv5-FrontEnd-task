@@ -26,6 +26,10 @@ export default function FetchProducts() {
     return (
         <div>
             {isLoading && (<SkeletonCard/>)}
+
+            {isError && (
+                <div className="text-red-500">Error: {(error as Error).message}</div>
+            )}
         </div>
     )
 }
