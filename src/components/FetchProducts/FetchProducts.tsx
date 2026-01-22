@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import { useQuery } from "@tanstack/react-query"
 interface Product {
     id: number
     title: string
@@ -18,6 +19,8 @@ export default function FetchProducts() {
         const response = await fetch("https://fakestoreapi.com/products");
         return response.json();
     };
+
+    const {data, isLoading, isError, error} = useQuery({queryKey: ["products"], queryFn: getAllProducts})
 
     return (
         <div>FetchProducts</div>
