@@ -31,7 +31,9 @@ export default function FetchProducts() {
 
     return (
         <div className='mt-8'>
-            {isLoading && (<SkeletonCard />)}
+            {isLoading && (
+                <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6'>{Array.from({ length: 5 }, (_, i) => (<SkeletonCard key={i} />))}</div>
+            )}
 
             {isError && (
                 <div className="text-red-500">Error: {(error as Error).message}</div>
