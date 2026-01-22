@@ -2,6 +2,9 @@
 import React from 'react';
 import { useQuery } from "@tanstack/react-query"
 import { SkeletonCard } from '../SkeletonCard/SkeletonCard';
+import { Badge } from 'lucide-react';
+import { Button } from '../ui/button';
+import { Card, CardHeader, CardAction, CardTitle, CardDescription, CardFooter, CardContent } from '../ui/card';
 interface Product {
     id: number
     title: string
@@ -18,17 +21,49 @@ interface Product {
 export default function FetchProducts() {
     const getAllProducts = async (): Promise<Product[]> => {
         const response = await fetch("https://fakestoreapi.com/products");
+        if (!response.ok) {
+            throw new Error("Failed to fetch products");
+        }
         return response.json();
     };
 
-    const {data, isLoading, isError, error} = useQuery({queryKey: ["products"], queryFn: getAllProducts})
+    const { data, isLoading, isError, error } = useQuery({ queryKey: ["products"], queryFn: getAllProducts })
 
     return (
-        <div>
-            {isLoading && (<SkeletonCard/>)}
+        <div className='mt-8'>
+            {isLoading && (<SkeletonCard />)}
 
             {isError && (
                 <div className="text-red-500">Error: {(error as Error).message}</div>
+            )}
+
+            {!isLoading && !isError && (
+                <div className="grid grid-cols-5 gap-6">
+                    {data?.map((product) => (
+                        <Card key={product.id} className="mx-auto w-full h-75 max-w-sm pt-0 rounded-2xl shadow-none hover:shadow hover:border-primaryColor relative overflow-hidden transition-all ease-in-out duration-300">
+                            <div className="h-12.5 w-12.5 absolute top-0 right-0 rounded-bl-xl bg-primaryColor text-white text-sm text-center">
+                                <span>56% OFF</span>
+                            </div>
+                            <div className="bg-background1Color w-full h-50 p-4">
+                                <img
+                                    src={product.image}
+                                    alt={product.title}
+                                    className="h-40 mx-auto object-contain"
+                                />
+                            </div>
+                            <CardContent className='px-3'>
+                                <CardTitle>{product.title.split(' ').slice(0, 3).join(" ")}</CardTitle>
+                                <CardDescription className='text-base text-HEadingColor flex items-center gap-2'>
+                                    <span className='font-bold'>₹{product.price}</span>
+                                    <span className='font-normal line-through'>₹14999</span>
+                                </CardDescription>
+                                <div className="border-t border-borderColor p-0 mt-2">
+                                    <span className='text-sucessColor font-semibold text-base'>Save - ₹32999</span>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    )).slice(0,5)}
+                </div>
             )}
         </div>
     )

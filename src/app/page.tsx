@@ -1,5 +1,6 @@
 import CategoryButtons from "@/components/CategoryButtons/CategoryButtons";
 import DailyEssentials from "@/components/DailyEssentials/DailyEssentials";
+import FetchProducts from "@/components/FetchProducts/FetchProducts";
 import HeroCarousel from "@/components/HeroCarousel/HeroCarousel";
 import TopCategories from "@/components/TopCategories/TopCategories";
 import TopElectronicsBrands from "@/components/TopElectronicsBrands/TopElectronicsBrands";
@@ -15,6 +16,11 @@ export default function Home() {
 
       <section className="w-full max-w-7xl mx-auto px-8 mt-4">
         <HeroCarousel />
+      </section>
+
+      {/* products */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FetchProducts/>
       </section>
 
       {/* top category */}
