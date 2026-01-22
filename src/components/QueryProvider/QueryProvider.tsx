@@ -1,7 +1,10 @@
 "use client"
 import React from 'react';
 
-export default function QueryProvider() {
+interface PropsInterface {
+    children : React.ReactNode
+}
+export default function QueryProvider({children}: PropsInterface) {
     return (
         <div>QueryProvider</div>
     )
