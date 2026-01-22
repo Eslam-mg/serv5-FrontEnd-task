@@ -2,9 +2,10 @@
 import React from 'react';
 import { useQuery } from "@tanstack/react-query"
 import { SkeletonCard } from '../SkeletonCard/SkeletonCard';
-import { Badge } from 'lucide-react';
+import { Badge, ChevronRight } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Card, CardHeader, CardAction, CardTitle, CardDescription, CardFooter, CardContent } from '../ui/card';
+import Link from 'next/link';
 interface Product {
     id: number
     title: string
@@ -31,6 +32,20 @@ export default function FetchProducts() {
 
     return (
         <div className='mt-8'>
+            {/* Header */}
+            <div className="mb-8 flex items-center justify-between border-b border-borderColor">
+                <div className="relative after:absolute after:w-full after:h-1 after:bg-primaryColor after:-bottom-1 after:-translate-y-1/2">
+                    <h2 className="text-lg sm:text-xl font-semibold">
+                        Grab the best deal on <span className="text-primaryColor">Smartphones</span>
+                    </h2>
+                    <div className="mt-2 h-1 w-32 rounded-full bg-pritext-primaryColor" />
+                </div>
+
+                <Link href="/" className="flex items-center gap-1 text-base font-medium text-HEadingColor">
+                    <span>View All</span>
+                    <ChevronRight className="mt-0.5 text-primaryColor" />
+                </Link>
+            </div>
             {isLoading && (
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6'>{Array.from({ length: 5 }, (_, i) => (<SkeletonCard key={i} />))}</div>
             )}
@@ -64,7 +79,7 @@ export default function FetchProducts() {
                                 </div>
                             </CardContent>
                         </Card>
-                    )).slice(0,5)}
+                    )).slice(0, 5)}
                 </div>
             )}
         </div>
